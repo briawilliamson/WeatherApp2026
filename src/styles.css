@@ -1,0 +1,15 @@
+body {
+    background-color: #f9f7fe;
+  font-family: "Elms Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+.main-box {
+    background-color: white;
+    max-width: 600px;
+    margin: 200px auto;
+    padding: 80px 100px;
+    box-shadow: 0 30px 50px rgba(65, 50, 100, 0.00);
+    border-radius: 16px;
+}
