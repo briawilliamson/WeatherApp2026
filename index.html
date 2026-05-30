@@ -12,25 +12,26 @@
 <body>
     <div class="main-box">
     <header>
-        <form>
-            <input type="search" placeholder="Enter city..." required />
-            <input type="submit" value="search" />
+        <form class="search-form">
+            <input type="Search" placeholder="Enter city..." required class="search-form-input" />
+            <input type="Submit" value="Search" class="search-form-button"/>
         </form>
     </header>
     <main>
+    <div class="weather-data">
         <div>
-            <h1>
-                Indianapolis
-            </h1>
-            <p>
+            <h1 class="weather-city">Indianapolis</h1>
+            <p class="weather-details">
                 Thursday May 28 9:55pm
                 <br />
-                H:81°  L:60°
+                H: <strong>81°</strong> L: <strong>60°</strong>
             </p>
-        </div>
-        <div>
-            ☁️ 69°F
-        </div>
+    </div>
+    <div class="weather-temp-container">
+        <div class="weather-icon">☁️</div>
+        <div class="weather-temp">69</div>
+        <div class="weather-fahrenheit">°F</div>
+    </div>
     </main>
     <footer>
         Coded by 
