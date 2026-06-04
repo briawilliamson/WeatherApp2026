@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/styles.css" />
+    <link rel="indexsheet" href="src/index.js" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
     <title>WeatherApp2026</title>
 </head>
@@ -23,7 +24,7 @@
         <div>
             <h1 class="weather-city" id="city">Indianapolis</h1>
             <p class="weather-details">
-                Thursday May 28 9:55pm
+                Thursday, <span id="description"></span>
                 <br />
                 H: <strong>81°</strong> L: <strong>60°</strong>
             </p>
@@ -31,7 +32,7 @@
     <div class="weather-temp-container">
         <div class="weather-icon">☁️</div>
         <div class="weather-temp" id="temp">69</div>
-        <div class="weather-fahrenheit">°F</div>
+        <div class="weather-fahrenheit" id="fahrenheit">°F</div>
     </div>
     </main>
     <footer>
