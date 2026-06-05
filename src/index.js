@@ -1,15 +1,36 @@
 function refreshWeather(response) {
     let tempElement = document.querySelector("#temp");
-    let temp = response.data.temperature.current;
     let cityElement = document.querySelector("#city");
-    let descriptionElement = document.querySelector("description");
+    let descriptionElement = document.querySelector("#description");
+    let humidityElement = document.querySelector("#humidity");
+    let windSpeedElement = document.querySelector("#wind-speed");
+    let fahrenheitElement = document.querySelector("#fahrenheit");
+    let timeElement = document.querySelector("#time");
 
-    console.log(response.data.condition.description);
+    let temp = response.data.time;
+
+    let timestamp = response.data.time;
+    let date = new Date(timestamp * 1000);
+    
+let options = {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit"
+};
+
+    console.log(response.date);
+
 cityElement.innerHTML = response.data.city;
+timeElement.innerHTML ="Thursday 8:00pm";
 descriptionElement.innerHTML = response.data.condition.description;
+humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`
+timeElement.innerHTML = date.toLocaleString("en-US", options);
+
 tempElement.innerHTML = Math.round(temp);
 
-    let fahrenheitElement = document.querySelector("#farenheit");
 fahrenheitElement.innerHTML = "°F";
 }
 
