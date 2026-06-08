@@ -7,11 +7,11 @@ function refreshWeather(response) {
     let fahrenheitElement = document.querySelector("#fahrenheit");
     let timeElement = document.querySelector("#time");
 
-    let temp = response.data.time;
+    let temp = response.data.temperature.current;
 
     let timestamp = response.data.time;
     let date = new Date(timestamp * 1000);
-    
+
 let options = {
     weekday: "long",
     month: "long",
@@ -23,10 +23,9 @@ let options = {
     console.log(response.date);
 
 cityElement.innerHTML = response.data.city;
-timeElement.innerHTML ="Thursday 8:00pm";
 descriptionElement.innerHTML = response.data.condition.description;
 humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`
+windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
 timeElement.innerHTML = date.toLocaleString("en-US", options);
 
 tempElement.innerHTML = Math.round(temp);
