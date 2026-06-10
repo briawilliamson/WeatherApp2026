@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/styles.css" />
-    <link rel="indexsheet" href="src/index.js" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
     <title>WeatherApp2026</title>
 </head>
@@ -22,19 +21,20 @@
     <main>
     <div class="weather-data">
         <div>
-            <h1 class="weather-city" id="city">Indianapolis</h1>
+            <h1 class="weather-city" id="city"></h1>
             <p class="weather-details">
                <span id="time"></span>, 
                <span id="description"></span>
                 <br />
-                Huminity: <strong id="humidity-temp"></strong> 
+                Huminity: <strong id="humidity"></strong>, 
                 Wind Speed: <strong id="wind-speed"></strong>
             </p>
-    </div>
-    <div class="weather-temp-container">
-        <div class="weather-icon">☁️</div>
-        <div class="weather-temp" id="temp">69</div>
-        <div class="weather-fahrenheit" id="fahrenheit">°F</div>
+        </div>
+     <div class="weather-temperture-container">
+        <div class="weather-icon"></div>
+        <div class="weather-temperture" id="temperture"></div>
+        <div class="weather-fahrenheit" id="fahrenheit"></div>
+     </div>
     </div>
     </main>
     <footer>
